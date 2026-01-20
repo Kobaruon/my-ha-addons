@@ -22,8 +22,8 @@ RUN \
     && rm /tmp/glance.tar.gz \
     && chmod a+x /app/glance
 
-# Get default config
-RUN curl -L -o /app/glance-default.yml "https://raw.githubusercontent.com/glanceapp/glance/main/docs/glance.yml"
+# Copy custom default config
+COPY config.yml /app/glance-default.yml
 
 COPY run.sh /
 RUN chmod a+x /run.sh
