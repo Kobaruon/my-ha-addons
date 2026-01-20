@@ -13,5 +13,6 @@ else
     bashio::log.info "Configuration file found at $GLANCE_CONFIG_FILE"
 fi
 
-bashio::log.info "Starting Glance..."
+bashio::log.info "Starting Glance on port 9191..."
+export GLANCE_SERVER_PORT=9191
 exec /app/glance --config "$GLANCE_CONFIG_FILE"
