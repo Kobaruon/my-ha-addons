@@ -15,6 +15,7 @@ ports_description:
   8080/tcp: Web Interface
 startup: application
 init: false
+host_network: true
 options:
   log_level: info
 schema:
