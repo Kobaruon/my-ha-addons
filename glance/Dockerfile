@@ -7,6 +7,8 @@ RUN \
     curl \
     tar
 
+WORKDIR /app
+
 # Download Glance
 ARG BUILD_ARCH
 ARG GLANCE_VERSION="v0.4.1"
